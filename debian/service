@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus ES Exporter
+
+[Service]
+Restart=always
+DynamicUser=yes
+ExecStart=/usr/bin/prometheus-es-exporter --config-dir /etc/prometheus-es-exporter
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+Source: prometheus-es-exporter
+Section: net
+Priority: optional
+Maintainer: Cole White <cwhite@wikimedia.org>
+Build-Depends: debhelper (>= 11), dh-python, python3-all,
+ python3-setuptools, python3-click, python3-elasticsearch,
+ python3-prometheus-client, python3-configobj
+Standards-Version: 4.1.3
+Homepage: https://github.com/braedon/prometheus-es-exporter
+X-Python3-Version: >= 3.2
+
+Package: prometheus-es-exporter
+Architecture: all
+Depends: python3-configobj, ${python3:Depends}, ${misc:Depends}
+Description: Prometheus Elasticsearch Exporter
+ This Prometheus exporter collects metrics from queries
+ run on an Elasticsearch cluster's data, and metrics about
+ the cluster itself.

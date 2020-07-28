@@ -1,0 +1,12 @@
+prometheus-es-exporter (0.11.1-1) unstable; urgency=medium
+
+  * initial debianization
+  * patch: remove jog dependency: jog is not available in Debian,
+    and appears to simply be a wrapper around the logger to generate
+    json structured log output.  standard logger is fine.
+  * patch: include click-config-file dependency: click-config-file
+    is not available in Debian, but is central to the configuration
+    functionality in this project.  since the library is a single
+    file, it is trivial to simply include it.
+
+ -- Cole White <cwhite@wikimedia.org>  Tue, 28 Jul 2020 17:12:01 +0000
